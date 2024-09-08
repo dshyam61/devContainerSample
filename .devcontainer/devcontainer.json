@@ -7,20 +7,22 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/redis:1": {},
-		"ghcr.io/devcontainers/features/memcached:1": {},
-		"ghcr.io/devcontainers/features/nginx:1": {}
+		"ghcr.io/itsmechlark/features/redis-server:1": {},
+		"ghcr.io/devcontainers/features/aws-cli:1": {}
+		//"ghcr.io/devcontainers/features/nginx:1": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		80, // Nginx
-		6379, // Redis
-		11211 // Memcached
+		//80, // Nginx
+		6379 // Redis
+		//11211 // Memcached
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "uname -a"
+	//"postCreateCommand": "uname -a"
+	//"postCreateCommand": "bash /workspaces/devContainerSample/.devcontainer/services.sh"
+	"postCreateCommand": "bash -c \"chmod +x services.sh && bash services.sh\""
 
 	// Configure tool-specific properties.
 	// "customizations": {},

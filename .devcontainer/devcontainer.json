@@ -21,8 +21,8 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	//"postCreateCommand": "uname -a"
-	//"postCreateCommand": "bash /workspaces/devContainerSample/.devcontainer/services.sh"
-	"postCreateCommand": "bash -c \"chmod +x services.sh && bash services.sh\""
+	"postCreateCommand": "bash /workspaces/devContainerSample/.devcontainer/services.sh"
+	//"postCreateCommand": "bash -c \"chmod +x services.sh && bash services.sh\""
 
 	// Configure tool-specific properties.
 	// "customizations": {},
